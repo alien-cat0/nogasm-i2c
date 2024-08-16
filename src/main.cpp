@@ -547,10 +547,14 @@ void requestFromBridge()
     {
       if (newSpeed == 0)
       {
-        newSpeed = -67;
+        motSpeed = -67;
+      }
+      else
+      {
+        motSpeed = newSpeed;
       }
       lastSpeed = newSpeed;
-      motSpeed = newSpeed;
+
       Serial.print("New speed received: ");
       Serial.println(newSpeed);
     }
